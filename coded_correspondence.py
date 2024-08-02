@@ -23,3 +23,20 @@ for character in message:
     translated_message += character
 
 print(translated_message)
+
+# Step: 2
+
+message_for_M = "hey Mitali! This is a super cool cipher, thanks for showing me! What else you got?"
+translated_message_for_M = ""
+
+for character in message_for_M:
+  if character in alphabet:
+    # Find the index of the character in the alphabet
+    character_value = alphabet.find(character)
+    # Shift the character by -10 positions in the alphabet, wrapping around using modulo 26
+    translated_message_for_M += alphabet[(character_value - 10) % 26]
+  else:
+    # If the character is not a letter (e.g., punctuation or space), it stays unchanged
+    translated_message_for_M += character
+        
+print(translated_message_for_M)
